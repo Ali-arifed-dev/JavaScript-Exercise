@@ -1,39 +1,18 @@
 
+// spread operator
 
-// Blocking (Synchronous)
+const number = [1,2,3];
 
-function fetchUserDataSync() {
-    alert("Fetching user data...");
-    return{ id: 2, name: "Abdi Ali"};
+const allNumbers = [... number, 4,5,6]
+
+console.log(allNumbers)
+
+
+// Rest Operator
+
+function multiply(...number) {
+    return number.reduce((mult , num) => mult * num, 1);
 }
-
-console.log("II Daabac Marka hore qoraalkan");
-const user = fetchUserDataSync();
-console.log("User data:", user);
-
-console.log("II Daabac Fariintan ugu Danbeyso");
-
-
-console.log("--------")
-
-// Non-Blocking (Asynchronous)
-
-function getUserData(callback) {
-
-    setTimeout(() => {
-        console.log("Print After 3 Second");
-    },3000);
-}
-
-console.log("ii daabac line kan koowaad");
-
-getUserData();
-
-console.log("ii daabac line kan u danbeeyo");
-
-
-
-
-
+console.log(multiply(20,10,2,8))
 
 
